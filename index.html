@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title></title>
@@ -13,13 +14,18 @@
     <script src="scripts/site.js"></script>
     <link rel="stylesheet" href="styles/style.css" />
 </head>
+
 <body>
     <!-- signInForm -->
     <div id="sign-in-root">
         <label id="sign-in-error" class="sign-in-error"></label>
         <div class="sign-in-form">
             <div class="sign-in-control">
-                <input autoFocus type="text" class="sign-in-input" id="wynUrl" placeholder="Portal URL" />
+                <select class="sign-in-input" id="wynSelect">
+                    <option value="" disabled selected>Select Wyn instance</option>
+                </select>
+                <!-- Fallback for older setups: hidden text input preserved for backward compatibility -->
+                <input type="hidden" id="wynUrl" />
             </div>
             <div class="sign-in-control">
                 <input autoFocus type="text" class="sign-in-input" id="username" placeholder="Username" />
@@ -41,4 +47,5 @@
         </div>
     </div>
 </body>
+
 </html>

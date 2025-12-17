@@ -1,247 +1,373 @@
-﻿@import 'variables.css';
+﻿@import "variables.css";
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: "Open Sans", "open sans", "segoe ui", helvetica, arial, sans-serif;
+html,
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", "open sans", "segoe ui", helvetica, arial,
+    sans-serif;
 }
-
 
 .centerAlign {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 50%;
 }
 
 .centerAlignButton {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .login-reg-panel {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    width: 70%;
-    right: 0;
-    left: 10%;
-    margin: auto;
-    height: 400px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 70%;
+  right: 0;
+  left: 10%;
+  margin: auto;
+  height: 400px;
 }
 
 .white-panel {
-    background-color: rgba(255,255, 255, 1);
-    height: 500px;
-    position: absolute;
-    top: -50px;
-    width: 50%;
-    right: calc(50% - 50px);
-    transition: .3s ease-in-out;
-    z-index: 0;
-    box-shadow: 0 0 15px 9px #00000096;
+  background-color: rgba(255, 255, 255, 1);
+  height: 500px;
+  position: absolute;
+  top: -50px;
+  width: 50%;
+  right: calc(50% - 50px);
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+  box-shadow: 0 0 15px 9px #00000096;
 }
 
 .login-show,
 .register-show {
-    z-index: 1;
-    display: block;
-    opacity: 0.9;
-    transition: 0.3s ease-in-out;
-    color: #242424;
-    text-align: left;
-    padding: 50px;
+  z-index: 1;
+  display: block;
+  opacity: 0.9;
+  transition: 0.3s ease-in-out;
+  color: #242424;
+  text-align: left;
+  padding: 50px;
 }
 
-    .login-show input[type="text"], .login-show input[type="password"] {
-        width: 100%;
-        display: block;
-        margin: 20px 0;
-        padding: 15px;
-        border: 1px solid #b5b5b5;
-        outline: none;
-    }
+.login-show input[type="text"],
+.login-show input[type="password"] {
+  width: 100%;
+  display: block;
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #b5b5b5;
+  outline: none;
+}
 
-    .login-show input[type="button"] {
-        max-width: 150px;
-        width: 100%;
-        background: #444444;
-        color: #f9f9f9;
-        border: none;
-        padding: 10px;
-        text-transform: uppercase;
-        border-radius: 2px;
-        float: left;
-        margin-left: 30%;
-    }
+.login-show input[type="button"] {
+  max-width: 150px;
+  width: 100%;
+  background: #444444;
+  color: #f9f9f9;
+  border: none;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  float: left;
+  margin-left: 30%;
+}
 
 #sign-in-root {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .sign-in-form {
-    width: 340px;
+  width: 340px;
 }
 
-    .sign-in-form > *, #org-root > div, #org-root > label {
-        box-sizing: border-box;
-        width: 100%;
-        margin-bottom: 25px;
-    }
+.sign-in-form > *,
+#org-root > div,
+#org-root > label {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 25px;
+}
 
-    .sign-in-form .sign-in-control {
-        height: 30px;
-    }
+.sign-in-form .sign-in-control {
+  height: 30px;
+}
 
 .sign-in-control > * {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .sign-in-error {
-    margin-bottom: 25px;
-    color: var(--color-text-error);
-    font-size: var(--fs-controls);
+  margin-bottom: 25px;
+  color: var(--color-text-error);
+  font-size: var(--fs-controls);
 }
 
-    .sign-in-error > * {
-        margin-bottom: 5px;
-    }
+.sign-in-error > * {
+  margin-bottom: 5px;
+}
 
 .sign-in-button {
-    height: 40px;
-    width: 100%;
-    cursor: pointer;
-    transition: all .3s;
-    color: var(--color-text-main);
-    border: none;
-    border-radius: 2px;
-    background-color: var(--color-accent);
-    font-size: var(--fs-controls);
+  height: 40px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: var(--color-text-main);
+  border: none;
+  border-radius: 2px;
+  background-color: var(--color-accent);
+  font-size: var(--fs-controls);
 }
 
-    .sign-in-button:hover {
-        background-color: var(--color-accent-hover);
-    }
+.sign-in-button:hover {
+  background-color: var(--color-accent-hover);
+}
 
-    .sign-in-button:focus, .sign-in-button:disabled {
-        outline: 0;
-    }
+.sign-in-button:focus,
+.sign-in-button:disabled {
+  outline: 0;
+}
 
-    .sign-in-button:disabled, .sign-in-button:active {
-        background-color: var(--color-accent-focus);
-    }
+.sign-in-button:disabled,
+.sign-in-button:active {
+  background-color: var(--color-accent-focus);
+}
 
 .sign-in-input {
-    padding: 5px;
-    transition: all .3s;
-    color: var(--color-text-input);
-    border: none;
-    border-bottom: 1px solid var(--color-accent);
-    font-size: var(--fs-controls);
+  padding: 5px;
+  transition: all 0.3s;
+  color: var(--color-text-input);
+  border: none;
+  border-bottom: 1px solid var(--color-accent);
+  font-size: var(--fs-controls);
 }
 
-    .sign-in-input:focus {
-        border-bottom: 1px solid var(--color-accent-focus);
-        outline: none;
-        background-color: #fff;
-    }
-
-    .sign-in-input::placeholder {
-        color: var(--color-text-placeholder);
-    }
-
-.org-form-label {
-    display: block;
-    width: 100%;
-    height: 40px;
-    padding: 5px;
-    transition: all .3s;
-    color: var(--color-text-input);
-    border: none;
-    font-size: var(--fs-controls);
+.sign-in-input:focus {
+  border-bottom: 1px solid var(--color-accent-focus);
+  outline: none;
+  background-color: #fff;
 }
 
+.sign-in-input::placeholder {
+  color: var(--color-text-placeholder);
+}
 
 .org-form-label {
-    display: block;
-    width: 100%;
-    height: 40px;
-    padding: 5px;
-    transition: all .3s;
-    color: var(--color-text-input);
-    border: none;
-    font-size: var(--fs-controls);
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  transition: all 0.3s;
+  color: var(--color-text-input);
+  border: none;
+  font-size: var(--fs-controls);
+}
+
+.org-form-label {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  transition: all 0.3s;
+  color: var(--color-text-input);
+  border: none;
+  font-size: var(--fs-controls);
 }
 
 .org-dropdown-title {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 0 5px;
-    cursor: pointer;
-    border-bottom: 1px solid var(--color-accent);
-    font-size: 14px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 5px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-accent);
+  font-size: 14px;
 }
 
-    .org-dropdown-title::after {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        display: block;
-        width: 10px;
-        height: 10px;
-        content: '';
-        transition: 0.1s;
-        transform: rotate(-45deg);
-        border-bottom: 2px solid var(--color-accent-focus);
-        border-left: 2px solid var(--color-accent-focus);
-    }
+.org-dropdown-title::after {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  content: "";
+  transition: 0.1s;
+  transform: rotate(-45deg);
+  border-bottom: 2px solid var(--color-accent-focus);
+  border-left: 2px solid var(--color-accent-focus);
+}
 
-    .org-dropdown-title.focused {
-        border-bottom: 1px solid var(--color-accent-focus);
-    }
+.org-dropdown-title.focused {
+  border-bottom: 1px solid var(--color-accent-focus);
+}
 
-        .org-dropdown-title.focused::after {
-            transform: rotate(135deg);
-        }
+.org-dropdown-title.focused::after {
+  transform: rotate(135deg);
+}
 
 .org-dropdown-options {
-    position: relative;
-    z-index: 1;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    background-color: var(--color-options-bg);
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: var(--color-options-bg);
 }
 
-    .org-dropdown-options > li {
-        display: flex;
-        height: 40px;
-        padding: 0 5px;
-        cursor: pointer;
-        border-bottom: 1px solid var(--color-accent-focus);
-        font-size: 14px;
-        align-items: center;
-    }
+.org-dropdown-options > li {
+  display: flex;
+  height: 40px;
+  padding: 0 5px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--color-accent-focus);
+  font-size: 14px;
+  align-items: center;
+}
 
-        .org-dropdown-options > li.selected {
-            background-color: var(--color-options-selected);
-        }
-
+.org-dropdown-options > li.selected {
+  background-color: var(--color-options-selected);
+}
 
 .not-displayed {
-    display: none !important;
+  display: none !important;
+}
+
+/* --- Modernized login form styles (overrides) --- */
+html,
+body {
+  background: linear-gradient(135deg, #f5f7fb 0%, #eef4ff 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sign-in-root {
+  padding: 24px;
+}
+
+.sign-in-form {
+  max-width: 420px;
+  width: 100%;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.09);
+  border: 1px solid rgba(16, 24, 40, 0.04);
+}
+
+.sign-in-form::before {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 56px;
+  background: linear-gradient(
+    90deg,
+    var(--color-accent),
+    var(--color-accent-hover)
+  );
+  border-radius: 4px;
+  margin-bottom: 18px;
+}
+
+.sign-in-form .sign-in-control {
+  height: auto;
+}
+
+.sign-in-input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(23, 37, 84, 0.06);
+  background-color: #fff;
+  font-size: 15px;
+  box-shadow: inset 0 1px 2px rgba(16, 24, 40, 0.02);
+}
+
+.sign-in-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 18px rgba(30, 144, 255, 0.12);
+  outline: none;
+}
+
+.sign-in-input::placeholder {
+  color: var(--color-text-placeholder);
+  opacity: 1;
+}
+
+/* Style the select to match inputs */
+#wynSelect {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #9aaad0 50%),
+    linear-gradient(135deg, #9aaad0 50%, transparent 50%);
+  background-position: calc(100% - 18px) calc(1em + 2px),
+    calc(100% - 13px) calc(1em + 2px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 36px;
+}
+
+.sign-in-button {
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  box-shadow: 0 6px 18px rgba(30, 144, 255, 0.15);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.sign-in-button:hover {
+  transform: translateY(-1px);
+}
+
+.sign-in-error {
+  font-size: 13px;
+  color: var(--color-text-error);
+  margin-bottom: 16px;
+}
+
+.org-dropdown-title {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(23, 37, 84, 0.06);
+  background: #fff;
+}
+
+.org-dropdown-options > li {
+  padding: 10px 12px;
+}
+
+.org-dropdown-options > li.selected {
+  background-color: rgba(30, 144, 255, 0.06);
+}
+
+@media (max-width: 480px) {
+  .sign-in-form {
+    margin: 16px;
+    box-shadow: none;
+    border: none;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .sign-in-form::before {
+    width: 44px;
+  }
 }

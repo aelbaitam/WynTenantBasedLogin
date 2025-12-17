@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Local",
+        "url": "http://localhost:51980"
+    },
+    {
+        "name": "Production",
+        "url": "https://wyndocs.wynenterprise.com"
+    }
+]
